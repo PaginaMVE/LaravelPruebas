@@ -32,6 +32,6 @@ class CreateProductsTable extends Migration{
      */
     public function down(){
         //Reinvierte los cambios de up
-        Schema::drop('products');
+        Schema::dropIfExists('products');
     }
 }
