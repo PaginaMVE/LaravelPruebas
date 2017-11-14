@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Product;
 
+use Illuminate\Support\Facades\Auth;
+
 class ProductsController extends Controller
 {
     /**
@@ -27,7 +29,8 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view("products.create");
+        $product = new Product;
+        return view("products.create",["product" => $product]);
     }
 
     /**
@@ -39,6 +42,18 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         //Guarda el nuevo producto
+        $product = new Product;
+
+        $product->title = $request->title;
+        $product->pricing = $request->pricing;
+        $product->description = $request->description;
+        $product->user_id = Auth::user()->id;
+
+        if($product->save()){
+            return redirect("/products");
+        }else{
+            return view("products.create",["product" => $product]);
+        }
     }
 
     /**
@@ -61,6 +76,8 @@ class ProductsController extends Controller
     public function edit($id)
     {
         //Muestra un formulario para editar el producto
+        $product = Product::find($id);
+        return view("products.edit",["product" => $product]);
     }
 
     /**
@@ -73,6 +90,17 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         //Actualiza lo que se envio en edit
+        $product = Product::find($id);
+
+        $product->title = $request->title;
+        $product->pricing = $request->pricing;
+        $product->description = $request->description;
+
+        if($product->save()){
+            return redirect("/products");
+        }else{
+            return view("products.edit",["product" => $product]);
+        }
     }
 
     /**
