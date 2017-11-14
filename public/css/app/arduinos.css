@@ -40,7 +40,6 @@
   color: white;
   z-index: 10;
   opacity: 0;
-  font-family: sans-serif;
   font-size: 4vh;
   transform: translateY(100px);
   transition: all .5s ease; }

@@ -75,19 +75,19 @@
 			  <input class="cb" type="checkbox" id="id1" value="1" name="slide" />
 			  <input class="cb" type="checkbox" id="id2" value="2" name="slide" />      
 			  <input class="cb" type="checkbox" id="id3" value="3" name="slide" />
-			  <article class='card one'>
+			  <article class='tarjeta one'>
 			   
 			    <label for='id2' ></label>
 			    <label for='id3' ></label>
 			    <label for='id1' ></label>  
 			  </article>
-			  <article class='card two'>
+			  <article class='tarjeta two'>
 			    
 			    <label for='id3' ></label>
 			    <label for='id1' ></label>
 			    <label for='id2' ></label>  
 			  </article>
-			  <article class='card three'>
+			  <article class='tarjeta three'>
 			   
 			    <label for='id1' ></label>
 			    <label for='id2'></label>
