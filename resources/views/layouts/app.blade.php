@@ -23,6 +23,7 @@
     <link href="{{ url('/css/app/galeria.css') }}" rel="stylesheet">
     <link href="{{ url('/css/app/footer.css') }}" rel="stylesheet">
     <link href="{{ url('/css/app/arduinos.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/app/menu.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -52,6 +53,14 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                        <li>
+                            <a href="">
+                                Mi carrito
+                                <span class="circle-shopping-cart">
+                                    {{$shopping_cart->productsSize()}}
+                                </span>
+                            </a>
+                        </li>
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>

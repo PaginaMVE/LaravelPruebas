@@ -77,21 +77,21 @@
 			  <input class="cb" type="checkbox" id="id3" value="3" name="slide" />
 			  <article class='tarjeta one'>
 			   
-			    <label for='id2' ></label>
-			    <label for='id3' ></label>
-			    <label for='id1' ></label>  
+			    <label id="mueve" for='id2' ></label>
+			    <label id="mueve" for='id3' ></label>
+			    <label id="mueve" for='id1' ></label>  
 			  </article>
 			  <article class='tarjeta two'>
 			    
-			    <label for='id3' ></label>
-			    <label for='id1' ></label>
-			    <label for='id2' ></label>  
+			    <label id="mueve" for='id3' ></label>
+			    <label id="mueve" for='id1' ></label>
+			    <label id="mueve" for='id2' ></label>  
 			  </article>
 			  <article class='tarjeta three'>
 			   
-			    <label for='id1' ></label>
-			    <label for='id2'></label>
-			    <label for='id3' ></label>  
+			    <label id="mueve" for='id1' ></label>
+			    <label id="mueve" for='id2'></label>
+			    <label id="mueve" for='id3' ></label>  
 			  </article>
 		</section>
 	</div>
