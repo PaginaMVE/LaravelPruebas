@@ -16,6 +16,9 @@ Route::get('/', 'MainController@home');
 Auth::routes();
 
 Route::resource('products', 'ProductsController');
+Route::resource('in_shopping_carts', 'InShoppingCartsController', [
+	'only' => ['store', 'destroy']
+]);
 
 /* GET /products => index
    POST /products => store
